@@ -22,7 +22,7 @@ SEO = ROOT / "content" / "seo"
 BASE_URL = "https://actaexpress.fr"
 TODAY = date.today().isoformat()
 SITEMAP_LIMIT = 45000
-WORKERS = min(8, os.cpu_count() or 4)
+WORKERS = 2 if os.environ.get("NETLIFY") else min(8, os.cpu_count() or 4)
 
 SERVICES = {
     "resiliation-mobile": {

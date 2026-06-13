@@ -3,5 +3,8 @@
   publish = "."
 
 [build.environment]
-  PYTHON_VERSION = "3.11"
+  BUILD_IMAGE = "focal"
+  PYTHON_VERSION = "3.13"
+  MISE_DISABLED = "1"
+  MISE_SKIP_INSTALL = "1"
   NETLIFY_SKIP_INSTALL = "true"

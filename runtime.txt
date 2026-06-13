@@ -1,1 +1,1 @@
-# Build Netlify — génère ~280k pages SEO au déploiement (pas d'upload manuel)
+3.13
