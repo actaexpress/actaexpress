@@ -1,6 +1,7 @@
 [build]
-  command = "python scripts/generate-seo-geo.py"
+  command = "python3 scripts/generate-seo-geo.py"
   publish = "."
 
 [build.environment]
   PYTHON_VERSION = "3.11"
+  NETLIFY_SKIP_INSTALL = "true"

@@ -3,6 +3,7 @@
 !.env.example
 node_modules/
 .DS_Store
+scripts/__pycache__/
 
 # Pages SEO générées (~280 000 fichiers) — recréées au build Netlify
 geo/
