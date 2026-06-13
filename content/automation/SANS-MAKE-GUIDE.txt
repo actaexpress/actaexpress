@@ -1,0 +1,84 @@
+ACTAEXPRESS — AUTOMATISATION SANS MAKE (plus simple)
+====================================================
+
+Make.com est trop compliqué pour mapper les champs.
+Voici une solution en 3 étapes — tu copies-colle, c'est tout.
+
+================================================================================
+ÉTAPE 1 — Script Google (10 min)
+================================================================================
+
+1. Ouvre ton Google Sheet "ActaExpress Commandes"
+
+2. Menu **Extensions** → **Apps Script**
+
+3. Supprime tout le code dans l'éditeur
+
+4. Ouvre ce fichier sur ton PC et copie TOUT le contenu :
+   C:\Users\mouss\Projects\actaexpress\content\automation\tally-to-sheet.gs
+
+5. Colle dans Apps Script → **Enregistrer** (icône disquette)
+   Nom du projet : ActaExpress Webhook
+
+6. **Déployer** (bouton bleu en haut à droite) → **Nouveau déploiement**
+
+7. Clique l'engrenage ⚙ → choisis **Application Web**
+
+8. Paramètres :
+   - Description : Tally webhook
+   - Exécuter en tant que : **Moi**
+   - Qui a accès : **Tout le monde** (important !)
+
+9. **Déployer** → autorise Google (Autoriser → ton compte → Avancé → Accéder)
+
+10. **COPIE L'URL** affichée :
+    https://script.google.com/macros/s/XXXXX/exec
+    (garde-la, c'est ton nouveau webhook)
+
+================================================================================
+ÉTAPE 2 — Brancher Tally (2 min)
+================================================================================
+
+1. Form **Résiliation mobile** → **Integrations** → **Webhooks**
+
+2. **Supprime** l'ancienne URL Make (ou modifie-la)
+
+3. Colle la **nouvelle URL Google** (script.google.com/.../exec)
+
+4. **Connect**
+
+================================================================================
+ÉTAPE 3 — Test (1 min)
+================================================================================
+
+1. Remplis le form Tally (fausses données OK)
+2. Ouvre Google Sheet → **nouvelle ligne** avec email + resiliation-mobile
+3. paye = non, pdf_envoye = non
+
+================================================================================
+BONUS — Recevoir aussi par email (sans rien coder)
+================================================================================
+
+Tally → form Mobile → **Settings** → **Self email notifications** (ou Notifications)
+→ active → acta.express0@gmail.com
+
+Tu reçois CHAQUE réponse par email en plus du Sheet.
+
+================================================================================
+MAKE.COM
+================================================================================
+
+Tu peux **désactiver / supprimer** le scénario Make — plus besoin pour le Sheet.
+
+Étape 3 (plus tard) : Stripe paie → PDF → email
+→ on fera quand le Sheet marche, ou en manuel pour l'instant.
+
+================================================================================
+PROBLÈME ?
+================================================================================
+
+- Ligne vide : vérifie URL webhook Tally = URL Google /exec
+- Erreur autorisation : redéploie avec "Tout le monde"
+- Pas d'email dans la ligne : remplis Tally avec un vrai email, reteste
+
+Dis **« script ok »** quand tu as l'URL Google copiée.

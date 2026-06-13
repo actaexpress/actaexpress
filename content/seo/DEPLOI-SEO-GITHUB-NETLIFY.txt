@@ -1,0 +1,66 @@
+SEO ACTAEXPRESS — DÉPLOIEMENT (34 969 communes)
+===============================================
+
+POURQUOI PAS DRAG & DROP ?
+--------------------------
+280 000 pages = ~1 Go. Netlify refuse les uploads manuels > 125 Mo.
+C'est pour ça que le site avait affiché "Page not found".
+
+LA BONNE MÉTHODE : Git + Build Netlify
+--------------------------------------
+Netlify génère les pages sur ses serveurs (~2 min), sans limite d'upload.
+
+ÉTAPE 1 — Créer un dépôt GitHub
+--------------------------------
+1. Allez sur https://github.com/new
+2. Nom : actaexpress
+3. Privé ou public — créez (sans README)
+
+ÉTAPE 2 — Pousser le code (PowerShell)
+---------------------------------------
+cd C:\Users\mouss\Projects\actaexpress
+git init
+git add .
+git commit -m "ActaExpress site + générateur SEO 34969 communes"
+git branch -M main
+git remote add origin https://github.com/VOTRE-PSEUDO/actaexpress.git
+git push -u origin main
+
+(Remplacez VOTRE-PSEUDO par votre compte GitHub)
+
+ÉTAPE 3 — Connecter Netlify à GitHub
+-------------------------------------
+1. https://app.netlify.com → ActaExpress → Site configuration
+2. Build & deploy → Link repository → GitHub → actaexpress
+3. Build settings (automatiques via netlify.toml) :
+   - Build command : python scripts/generate-seo-geo.py
+   - Publish directory : .
+4. Deploy site — attendez 5-10 min (premier build plus long)
+
+ÉTAPE 4 — Vérifier
+------------------
+- https://actaexpress.fr/geo/  → hub 34 969 communes
+- https://actaexpress.fr/sitemap.xml  → index 7 sitemaps
+- https://actaexpress.fr/assets/pdf-preview.svg  → aperçu PDF
+
+ÉTAPE 5 — Google Search Console
+-------------------------------
+1. https://search.google.com/search-console
+2. Sitemaps → https://actaexpress.fr/sitemap.xml
+
+FICHIERS IMPORTANTS
+-------------------
+netlify.toml          → lance le générateur au build
+content/seo/communes-fr.json  → 34 969 communes (officiel)
+scripts/generate-seo-geo.py  → ~280 000 pages
+geo/                  → généré, PAS dans Git (.gitignore)
+
+SI LE BUILD ÉCHOUE
+------------------
+Netlify → Deploys → clic sur le deploy rouge → View logs
+Erreur Python ? Vérifiez runtime.txt (3.11) et communes-fr.json présent.
+
+DEPLOY LÉGER (sans SEO, urgence)
+--------------------------------
+python scripts/prepare-netlify-deploy.py
+→ glisser le contenu de netlify-deploy/ (27 fichiers)

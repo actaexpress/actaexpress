@@ -1,0 +1,140 @@
+ACTAEXPRESS — 100 % AUTO (PDF envoyé au client)
+================================================
+
+Plus besoin de Make.com pour mapper les champs.
+
+FLUX AUTOMATIQUE :
+  Client → Tally → Stripe (paie) → PDF par email au CLIENT
+
+  1. Tally envoie les réponses → Google Sheet (paye = non)
+  2. Stripe confirme le paiement → OpenAI rédige → PDF → email client
+  3. Sheet mis à jour (paye = oui, pdf_envoye = oui)
+
+================================================================================
+CE QU'IL TE FAUT
+================================================================================
+
+  □ Google Sheet "ActaExpress Commandes" (déjà fait)
+  □ Compte OpenAI + clé API (~5 $ de crédit)
+     → https://platform.openai.com/api-keys
+  □ 20 minutes
+
+================================================================================
+ÉTAPE 1 — INSTALLER LE SCRIPT (10 min)
+================================================================================
+
+1. Ouvre Google Sheet "ActaExpress Commandes"
+
+2. Extensions → Apps Script
+
+3. Supprime TOUT l'ancien code
+
+4. Copie-colle le fichier :
+   C:\Users\mouss\Projects\actaexpress\content\automation\actaexpress-auto.gs
+
+5. Enregistrer (disquette)
+
+6. ⚙ Paramètres du projet (icône engrenage à gauche) → Propriétés du script
+
+7. Ajoute 2 propriétés :
+
+   | Propriété       | Valeur                    |
+   |-----------------|---------------------------|
+   | OPENAI_API_KEY  | sk-proj-... (ta clé OpenAI)|
+   | ADMIN_EMAIL     | acta.express0@gmail.com   |
+
+8. Déployer → Nouveau déploiement → Application Web
+   - Exécuter en tant que : Moi
+   - Accès : Tout le monde
+   - Déployer → Autoriser Google
+
+9. COPIE L'URL :
+   https://script.google.com/macros/s/XXXXX/exec
+
+   → C'est ton URL magique (Tally + Stripe)
+
+================================================================================
+ÉTAPE 2 — BRANCHER TALLY (2 min)
+================================================================================
+
+Form Résiliation mobile → Integrations → Webhooks
+
+  → Colle l'URL Google (script.google.com/.../exec)
+  → Connect
+
+(Supprime l'ancienne URL Make si elle est encore là)
+
+================================================================================
+ÉTAPE 3 — BRANCHER STRIPE (5 min)
+================================================================================
+
+1. https://dashboard.stripe.com (mode PRODUCTION / Live)
+
+2. Developers → Webhooks → Add endpoint
+
+3. URL : la MÊME URL Google (script.google.com/.../exec)
+
+4. Events to send :
+   → checkout.session.completed
+
+5. Add endpoint → Save
+
+IMPORTANT : Payment Links Stripe envoient bien checkout.session.completed
+quand le client paie.
+
+================================================================================
+ÉTAPE 4 — TEST COMPLET (5 min)
+================================================================================
+
+1. Ouvre actaexpress.fr → Résiliation mobile
+
+2. Remplis avec TON email (pour recevoir le PDF test)
+
+3. Paie 17 € (vrai paiement — tu peux te rembourser après dans Stripe)
+
+4. Attends 1 à 3 minutes
+
+5. Vérifie :
+   □ Email client avec PDF joint
+   □ Google Sheet : paye = oui, pdf_envoye = oui
+   □ Email admin "Commande traitée"
+
+================================================================================
+SI ÇA NE MARCHE PAS
+================================================================================
+
+PDF pas reçu :
+  - Vérifie OPENAI_API_KEY dans Propriétés du script
+  - Apps Script → Exécutions → voir les erreurs
+  - Stripe Webhook → Events → voir si checkout.session.completed = 200
+
+Sheet vide après Tally :
+  - URL Tally = URL Google /exec
+  - Redéploie le script si tu as changé le code
+
+Stripe OK mais pas de PDF :
+  - L'email Stripe doit = l'email Tally (même adresse)
+  - Une ligne paye=non doit exister dans le Sheet AVANT le paiement
+
+================================================================================
+MAKE.COM
+================================================================================
+
+Tu peux supprimer / désactiver le scénario Make — inutile.
+
+================================================================================
+COÛT PAR COMMANDE
+================================================================================
+
+  OpenAI (gpt-4o-mini) : ~0,05 à 0,15 €
+  Stripe : ~0,25 € + 1,4 %
+  Google : gratuit
+
+================================================================================
+
+Dis **« auto installé »** quand tu as :
+  □ Script déployé
+  □ Tally webhook = URL Google
+  □ Stripe webhook = même URL
+
+On fera le test ensemble.

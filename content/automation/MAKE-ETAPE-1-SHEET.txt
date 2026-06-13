@@ -1,0 +1,103 @@
+ACTAEXPRESS — MAKE ÉTAPE 1 : GOOGLE SHEET
+===========================================
+
+Objectif : un tableur qui stocke chaque commande Tally avant/après paiement Stripe.
+
+================================================================================
+PARTIE A — CRÉER LE SHEET (5 minutes)
+================================================================================
+
+1. Va sur https://sheets.google.com (compte Google = acta.express0@gmail.com)
+
+2. Clique **+ Blank** (feuille vierge)
+
+3. En haut à gauche, renomme le fichier :
+   → **ActaExpress Commandes**
+
+4. Onglet en bas : renomme **Feuille1** en **Commandes**
+   (clic droit sur l'onglet → Renommer)
+
+5. Importe les colonnes :
+   - Menu **Fichier** → **Importer**
+   - Onglet **Importer**
+   - **Parcourir** → choisis ce fichier :
+     C:\Users\mouss\Projects\actaexpress\content\automation\ActaExpress-Commandes.csv
+   - Emplacement : **Remplacer la feuille actuelle**
+   - Type séparateur : **Virgule**
+   - **Importer les données**
+
+6. Tu dois voir **1 ligne d'en-têtes** (23 colonnes A à W), pas de données en dessous.
+
+================================================================================
+PARTIE B — MISE EN FORME (2 minutes)
+================================================================================
+
+1. Clique sur la **ligne 1** → menu **Affichage** → **Figer** → **1 ligne**
+   (les titres restent visibles en scrollant)
+
+2. Colonne **D (paye)** et **E (pdf_envoye)** :
+   - Clique sur D2, tire vers le bas 50 cellules si tu veux
+   - Menu **Données** → **Validation des données**
+   - Critères : **Liste d'éléments** → tape : non, oui
+   - Répète pour colonne E
+
+3. Colonne **C (type_doc)** — pour l'instant tout sera :
+   resiliation-mobile
+
+4. (Optionnel) Colore la ligne 1 en bleu clair pour repérer les titres.
+
+================================================================================
+PARTIE C — COLONNES EXPLIQUÉES
+================================================================================
+
+| Colonne | Rôle |
+|---------|------|
+| A date_soumission | Quand le client a rempli Tally |
+| B email | Email client (lien avec Stripe) |
+| C type_doc | resiliation-mobile, resiliation-box, etc. |
+| D paye | non → oui quand Stripe confirme |
+| E pdf_envoye | non → oui quand email PDF parti |
+| F à U | Réponses du questionnaire mobile |
+| V reponses_json | Copie complète pour OpenAI |
+| W stripe_payment_id | ID paiement Stripe (Make remplit) |
+
+================================================================================
+PARTIE D — TEST VISUEL
+================================================================================
+
+Ajoute **1 ligne test** à la main (ligne 2) pour vérifier :
+
+  date_soumission : 11/06/2026 14:00
+  email           : acta.express0@gmail.com
+  type_doc        : resiliation-mobile
+  paye            : non
+  pdf_envoye      : non
+  civilite        : Monsieur
+  nom             : TEST
+  prenom          : Jean
+  ... (le reste peut rester vide)
+
+→ Supprime cette ligne test avant la mise en prod, ou laisse paye=non.
+
+================================================================================
+PARTIE E — PARTAGER AVEC MAKE (plus tard étape 2)
+================================================================================
+
+Quand tu connecteras Make.com :
+  - Make demandera l'accès à Google Sheets
+  - Autorise avec le même compte Gmail
+  - Sélectionne le fichier **ActaExpress Commandes** / onglet **Commandes**
+
+================================================================================
+C'EST BON QUAND...
+================================================================================
+
+  □ Fichier nommé "ActaExpress Commandes"
+  □ Onglet "Commandes"
+  □ 23 colonnes en ligne 1 (A1 = date_soumission)
+  □ Ligne 1 figée
+
+Dis **« sheet ok »** + l'URL du Google Sheet (ou capture) → on passe à
+**« go make étape 2 »** (brancher Tally → Sheet).
+
+NOTE : ne partage pas le Sheet en "public". Make se connecte via ton compte Google.

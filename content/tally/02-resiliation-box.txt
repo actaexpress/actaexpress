@@ -1,0 +1,35 @@
+FORMULAIRE TALLY #2 — RÉSILIATION BOX / INTERNET (17 €)
+=======================================================
+Titre : ActaExpress — Résiliation box internet / fibre
+
+[M] Civilité * → Monsieur | Madame
+[T] Nom *
+[T] Prénom *
+[T] Adresse (expéditeur) *
+[T] Code postal *
+[T] Ville *
+[E] Email *
+[P] Téléphone (optionnel)
+
+[M] Opérateur *
+    Free | Orange | SFR | Bouygues | Autre
+
+[M] Type de connexion *
+    Box ADSL | Fibre | Internet seul | Autre
+
+[T] Numéro client / référence contrat *
+
+[T] Adresse de raccordement (si différente de l'expéditeur)
+    Placeholder : Laissez vide si identique
+
+[D] Date souhaitée de résiliation *
+
+[M] Motif *
+    Fin d'engagement | Déménagement | Changement d'opérateur | Insatisfaction | Autre
+
+[M] Équipement à retourner ?
+    Livebox / Box Orange | Freebox | SFR Box | Bouygues Box | Aucun / Inconnu
+
+[L] Informations complémentaires (optionnel)
+
+Bouton : Continuer vers le paiement — 17 €

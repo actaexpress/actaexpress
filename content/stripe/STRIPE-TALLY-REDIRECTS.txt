@@ -1,0 +1,28 @@
+STRIPE ACTAEXPRESS — mode LIVE
+
+Tally Settings -> After submission -> Redirect to URL
+
+Form 1 Resiliation mobile (KYR0yA)
+  -> https://buy.stripe.com/5kQcMY3D94Zw0zi2Ex14400
+
+Form 2 Resiliation box (RGrLad)
+  -> https://buy.stripe.com/14A5kwgpVajQ2Hq3IB14401
+
+Form 3 Resiliation energie (obxO1e)
+  -> https://buy.stripe.com/9B66oAa1x0Jg2Hq2Ex14402
+
+Form 4 Resiliation assurance (Gx704p)
+  -> https://buy.stripe.com/4gM9AMc9FgIe95O2Ex14403
+
+Form 5 Mise en demeure (VLx8AJ)
+  -> https://buy.stripe.com/bJe9AM7TpeA6a9S7YR14404
+
+Form 6 Reclamation assurance (Eka0EX)
+  -> https://buy.stripe.com/28E6oA5LheA6dm4frj14405
+
+Form 7 Reclamation banque (jaExYx)
+  -> https://buy.stripe.com/8x24gs5LhajQci01At14406
+
+Form 8 Contestation amende (44Gjyk)
+  -> https://buy.stripe.com/bJe6oAc9F63Afuca6Z14407
+

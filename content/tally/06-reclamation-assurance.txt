@@ -1,0 +1,35 @@
+FORMULAIRE TALLY #6 — RÉCLAMATION ASSURANCE (22 €)
+====================================================
+Titre : ActaExpress — Réclamation assurance
+
+[M] Civilité * → Monsieur | Madame
+[T] Nom *
+[T] Prénom *
+[T] Adresse *
+[T] Code postal *
+[T] Ville *
+[E] Email *
+[P] Téléphone (optionnel)
+
+[T] Nom de l'assurance *
+[T] Numéro de contrat *
+[T] Numéro de sinistre / dossier (si applicable)
+
+[M] Type de contrat *
+    Auto | Habitation | Santé / Mutuelle | Autre
+
+[M] Objet de la réclamation *
+    Refus d'indemnisation | Indemnisation insuffisante | Retard de traitement | Mauvaise prise en charge | Autre
+
+[D] Date du sinistre ou de la décision contestée *
+
+[L] Description des faits *
+
+[N] Montant réclamé (€) — optionnel
+
+[M] Démarches déjà effectuées
+    Téléphone | Email | Courrier | Aucune
+
+[L] Réponse de l'assurance reçue ? Décrivez (optionnel)
+
+Bouton : Continuer vers le paiement — 22 €

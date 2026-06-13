@@ -1,0 +1,52 @@
+SEO ACTAEXPRESS — COUVERTURE NATIONALE COMPLÈTE
+===============================================
+Date : 13 juin 2026
+
+CHIFFRES
+--------
+- 34 969 communes (source officielle geo.api.gouv.fr)
+- 101 départements (métropole + DOM)
+- 8 types de documents
+- ~280 000 pages SEO générées
+- 7 sitemaps (index : sitemap.xml)
+
+DONNÉES
+-------
+content/seo/communes-fr.json      — liste compacte (commitée)
+content/seo/departements-fr.json  — 101 départements
+content/seo/regions-fr.json       — 18 régions
+
+RÉGÉNÉRER
+---------
+  cd scripts
+  python fetch-communes-fr.py    # met à jour les JSON (1× par an)
+  python generate-seo-geo.py     # ~2 min, ~280 000 fichiers
+
+DÉPLOIEMENT NETLIFY
+-------------------
+netlify.toml lance generate-seo-geo.py au build.
+Le dossier geo/ est dans .gitignore (trop volumineux pour Git).
+
+Option A — Build Netlify (recommandé) :
+  git push → Netlify génère les pages au déploiement
+
+Option B — Build local puis deploy :
+  python scripts/generate-seo-geo.py
+  netlify deploy --prod --dir .
+
+GOOGLE SEARCH CONSOLE
+---------------------
+1. https://search.google.com/search-console
+2. Propriété actaexpress.fr
+3. Sitemaps → https://actaexpress.fr/sitemap.xml
+   (index de 7 fichiers sitemap-1.xml … sitemap-7.xml)
+
+STRUCTURE URL
+-------------
+/geo/                                          — hub national
+/geo/resiliation-mobile/                       — index départements
+/geo/resiliation-mobile/dep-15-cantal.html     — page département
+/geo/resiliation-mobile/communes/dep-15-cantal.html — liste communes
+/geo/resiliation-mobile/ville-aurillac-15014.html   — page commune
+
+Chaque commune × chaque service = URL dédiée pour le référencement local.

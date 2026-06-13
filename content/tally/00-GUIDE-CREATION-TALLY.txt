@@ -1,0 +1,34 @@
+ACTAEXPRESS — CRÉER LES 8 FORMULAIRES TALLY
+============================================
+
+1. Compte : https://tally.so → S'inscrire (gratuit)
+2. Pour CHAQUE fichier 01 à 08 : New form → copier les champs dans l'ordre
+3. Settings du formulaire :
+   - Title = titre indiqué dans le fichier
+   - Submit button = "Continuer vers le paiement" ou "Payer et recevoir mon PDF"
+   - After submit → Redirect to URL (Stripe Payment Link — à coller plus tard)
+4. Settings → Integrations → Webhooks (pour Make.com plus tard)
+
+APRÈS CRÉATION — NOTER L'URL DE CHAQUE FORMULAIRE :
+  01 resiliation-mobile     → https://tally.so/r/XXXXXX
+  02 resiliation-box        → https://tally.so/r/XXXXXX
+  ... coller dans content/tally/URLS.txt
+
+STRIPE (plus tard) :
+  1 Payment Link par doc → redirect après Tally = lien Stripe
+  OU : Tally redirect direct vers Stripe avec email en param (?prefilled_email=)
+
+MAKE.COM (plus tard) :
+  Trigger : Tally webhook
+  → OpenAI génère le doc
+  → PDF → email SendGrid
+
+TYPES DE CHAMPS TALLY :
+  [T] = Short text (Input)
+  [L] = Long text (Textarea)
+  [E] = Email
+  [P] = Phone number
+  [D] = Date
+  [N] = Number
+  [M] = Multiple choice (single)
+  [C] = Dropdown

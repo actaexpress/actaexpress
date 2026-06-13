@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 520" role="img" aria-label="Exemple de document ActaExpress">
+  <rect width="400" height="520" fill="#ffffff" stroke="#e2e8f0" stroke-width="2" rx="8"/>
+  <rect x="40" y="36" width="120" height="10" fill="#cbd5e1" rx="2"/>
+  <rect x="40" y="54" width="180" height="8" fill="#e2e8f0" rx="2"/>
+  <rect x="40" y="68" width="160" height="8" fill="#e2e8f0" rx="2"/>
+  <rect x="240" y="100" width="120" height="8" fill="#e2e8f0" rx="2"/>
+  <rect x="240" y="116" width="100" height="8" fill="#e2e8f0" rx="2"/>
+  <rect x="40" y="148" width="200" height="10" fill="#1e3a5f" opacity="0.85" rx="2"/>
+  <rect x="40" y="178" width="320" height="8" fill="#e2e8f0" rx="2"/>
+  <rect x="40" y="194" width="300" height="8" fill="#e2e8f0" rx="2"/>
+  <rect x="40" y="210" width="310" height="8" fill="#e2e8f0" rx="2"/>
+  <rect x="40" y="226" width="280" height="8" fill="#e2e8f0" rx="2"/>
+  <rect x="40" y="250" width="320" height="8" fill="#e2e8f0" rx="2"/>
+  <rect x="40" y="266" width="290" height="8" fill="#e2e8f0" rx="2"/>
+  <rect x="40" y="282" width="305" height="8" fill="#e2e8f0" rx="2"/>
+  <rect x="40" y="306" width="320" height="8" fill="#e2e8f0" rx="2"/>
+  <rect x="40" y="322" width="270" height="8" fill="#e2e8f0" rx="2"/>
+  <rect x="40" y="360" width="140" height="8" fill="#cbd5e1" rx="2"/>
+  <rect x="40" y="380" width="100" height="8" fill="#e2e8f0" rx="2"/>
+  <rect x="0" y="420" width="400" height="100" fill="#f8fafc" opacity="0.92"/>
+  <text x="200" y="475" text-anchor="middle" font-family="Inter,sans-serif" font-size="13" fill="#64748b" font-weight="600">EXEMPLE &#8212; Donn&#233;es flout&#233;es</text>
+</svg>

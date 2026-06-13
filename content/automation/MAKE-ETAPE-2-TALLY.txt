@@ -1,0 +1,137 @@
+ACTAEXPRESS — MAKE ÉTAPE 2 : TALLY → GOOGLE SHEET
+===================================================
+
+Objectif : quand quelqu'un remplit le form Mobile, une ligne s'ajoute
+automatiquement dans "ActaExpress Commandes" (paye = non).
+
+Form Tally mobile : https://tally.so/r/KYR0yA  (ID: KYR0yA)
+
+================================================================================
+PARTIE A — CRÉER LE SCÉNARIO MAKE (5 min)
+================================================================================
+
+1. Va sur https://www.make.com → S'inscrire / Se connecter (gratuit)
+
+2. Clique **Create a new scenario** (Scénario vierge)
+
+3. Nomme-le en haut : **ActaExpress - Tally vers Sheet**
+
+================================================================================
+PARTIE B — MODULE 1 : WEBHOOK (réception Tally)
+================================================================================
+
+4. Clique le **+** au centre → cherche **Webhooks**
+
+5. Choisis **Webhooks → Custom webhook**
+
+6. Clique **Add** → nom : **Tally ActaExpress**
+
+7. Make affiche une URL du type :
+   https://hook.eu1.make.com/xxxxxxxxxxxxxxxx
+
+   → COPIE cette URL (garde l'onglet Make ouvert)
+
+8. Ne clique pas encore Run — on configure Tally d'abord.
+
+================================================================================
+PARTIE C — BRANCHER TALLY
+================================================================================
+
+9. Ouvre https://tally.so → form **Résiliation mobile** (KYR0yA)
+
+10. Onglet **Integrations** (ou Settings → Integrations → Webhooks)
+
+11. **Connect** ou **Add webhook**
+
+12. Colle l'URL Make copiée à l'étape 7
+
+13. Event : **Form submission** (réponse envoyée)
+
+14. Save / Enable
+
+================================================================================
+PARTIE D — TEST WEBHOOK (important pour mapper les champs)
+================================================================================
+
+15. Retour Make → clic droit sur le module Webhook → **Run once**
+    (ou bouton **Run once** en bas à gauche — écoute active)
+
+16. Ouvre le form Tally en navigation privée → remplis avec des fausses
+    données → clique **Continuer vers le paiement**
+    (tu n'es PAS obligé de payer pour ce test)
+
+17. Make doit afficher **1 bundle** reçu (bulle verte sur Webhook).
+    Clique la bulle → tu vois toutes les réponses JSON.
+
+    → Note les noms des champs (Email, Nom, Prénom, etc.)
+
+================================================================================
+PARTIE E — MODULE 2 : GOOGLE SHEETS (ajouter une ligne)
+================================================================================
+
+18. Clique **+** après le Webhook → **Google Sheets** → **Add a row**
+
+19. **Create a connection** → connecte **acta.express0@gmail.com**
+    → Autorise Make à accéder à Sheets
+
+20. Configuration :
+    - Spreadsheet : **ActaExpress Commandes**
+    - Sheet : **Commandes**
+
+21. Mappe les colonnes (clique chaque champ → choisis dans le webhook) :
+
+    | Colonne Sheet      | Valeur Make                          |
+    |--------------------|--------------------------------------|
+    | date_soumission    | formatDate(now; DD/MM/YYYY HH:mm)    |
+    | email              | champ Email du webhook Tally         |
+    | type_doc           | texte fixe : resiliation-mobile      |
+    | paye               | texte fixe : non                     |
+    | pdf_envoye         | texte fixe : non                     |
+    | civilite           | Civilité (webhook)                   |
+    | nom                | Nom (webhook)                        |
+    | prenom             | Prénom (webhook)                     |
+    | adresse            | Adresse (webhook)                    |
+    | code_postal        | Code postal (webhook)                |
+    | ville              | Ville (webhook)                      |
+    | telephone          | Téléphone (webhook)                  |
+    | operateur          | Opérateur (webhook)                  |
+    | operateur_autre    | Précisez opérateur si présent        |
+    | numero_ligne       | Numéro de ligne (webhook)            |
+    | numero_client      | Numéro client (webhook)              |
+    | date_resiliation   | Date résiliation (webhook)           |
+    | motif              | Motif (webhook)                      |
+    | motif_autre        | Précisez motif si présent            |
+    | arret_prelevements | Arrêt prélèvements (webhook)         |
+    | infos_complementaires | Infos complémentaires (webhook)   |
+    | reponses_json      | tout le body webhook en texte        |
+    | stripe_payment_id  | laisser VIDE pour l'instant          |
+
+    Astuce reponses_json : utilise le module précédent → Data ou
+    "Webhook body" en string si disponible.
+
+22. **OK** → Save le module
+
+================================================================================
+PARTIE F — ACTIVER
+================================================================================
+
+23. En bas à gauche : interrupteur **ON** (Scheduling = Immediately)
+
+24. Test final :
+    - Remplis Tally mobile encore une fois
+    - Vérifie Google Sheet → nouvelle ligne avec paye = non
+
+================================================================================
+C'EST BON QUAND...
+================================================================================
+
+  □ 1 ligne apparaît dans le Sheet après chaque réponse Tally
+  □ email + nom + prénom remplis correctement
+  □ paye = non, pdf_envoye = non
+
+Dis **« tally ok »** → étape 3 : Stripe paie → OpenAI → PDF → email auto.
+
+PROBLÈMES FRÉQUENTS
+  - Webhook vide : vérifie Integrations Tally + Run once avant test
+  - Mauvaise feuille : vérifie onglet "Commandes" pas Feuille1
+  - Champs vides : renvoie test Tally, remap avec les bons noms du bundle

@@ -1,0 +1,170 @@
+ACTAEXPRESS — CRÉER LES 7 AUTRES FORMULAIRES TALLY
+==================================================
+
+FORMULAIRE 1 DÉJÀ FAIT :
+  https://tally.so/r/KYR0yA  (Résiliation mobile)
+
+MÉTHODE RAPIDE (15 min pour les 7)
+----------------------------------
+1. tally.so/dashboard → survole "ActaExpress — Résiliation mobile"
+2. ⋮ (3 points) → Duplicate
+3. Renomme le duplicate
+4. ⋮ sur le form → "Edit with AI" OU modifie à la main
+5. Colle le prompt ci-dessous pour CE form
+6. Publish → copie l'URL
+7. Répète 7 fois
+
+Quand tu as les 7 URLs, envoie-les moi → je branche tout sur le site.
+
+
+═══════════════════════════════════════════════════════
+FORM 2 — Résiliation box (17 €)
+═══════════════════════════════════════════════════════
+Titre : ActaExpress — Résiliation box internet
+Bouton : Continuer vers le paiement — 17 €
+
+Prompt IA (modifier le form dupliqué) :
+---
+Adapte ce formulaire pour une résiliation box internet/fibre en France.
+Remplace les champs mobile par :
+- Type connexion (choix : Box ADSL, Fibre, Internet seul, Autre)
+- Opérateur (Free, Orange, SFR, Bouygues, Autre)
+- Numéro client / référence contrat
+- Adresse de raccordement (optionnel, texte : laisser vide si identique)
+- Date souhaitée de résiliation
+- Motif (Fin engagement, Déménagement, Changement opérateur, Insatisfaction, Autre)
+- Équipement à retourner (Livebox, Freebox, SFR Box, Bouygues Box, Aucun)
+Garde : Civilité, Nom, Prénom, Adresse, CP, Ville, Email, Téléphone optionnel.
+---
+
+
+═══════════════════════════════════════════════════════
+FORM 3 — Résiliation énergie (17 €)
+═══════════════════════════════════════════════════════
+Titre : ActaExpress — Résiliation énergie
+Bouton : Continuer vers le paiement — 17 €
+
+Prompt IA :
+---
+Adapte pour résiliation électricité/gaz France.
+Champs :
+- Fournisseur (EDF, Engie, TotalEnergies, Autre)
+- Type énergie (Électricité, Gaz, Les deux)
+- Numéro PDL ou PCE (texte, aide : sur facture)
+- Adresse du compteur
+- Date souhaitée résiliation
+- Motif (Déménagement, Changement fournisseur, Fin bail, Autre)
+- Relève compteur (Oui, Non, À faire)
+Garde identité + email + téléphone optionnel.
+---
+
+
+═══════════════════════════════════════════════════════
+FORM 4 — Résiliation assurance (17 €)
+═══════════════════════════════════════════════════════
+Titre : ActaExpress — Résiliation assurance / mutuelle
+Bouton : Continuer vers le paiement — 17 €
+
+Prompt IA :
+---
+Adapte pour résiliation assurance/mutuelle France.
+Champs :
+- Nom assurance/mutuelle
+- Numéro contrat
+- Type (Auto, Habitation, Santé/Mutuelle, Prévoyance, Autre)
+- Date souhaitée résiliation
+- Motif (Échéance, Loi Hamon, Vente véhicule, Déménagement, Autre)
+- Contrat plus d'un an (Oui, Non, Je ne sais pas)
+Garde identité + email.
+---
+
+
+═══════════════════════════════════════════════════════
+FORM 5 — Mise en demeure (24 €)
+═══════════════════════════════════════════════════════
+Titre : ActaExpress — Mise en demeure
+Bouton : Continuer vers le paiement — 24 €
+
+Prompt IA :
+---
+Adapte pour mise en demeure France.
+Champs créancier : Civilité, Nom, Prénom, Adresse, Email, Téléphone optionnel.
+Champs débiteur : Nom ou raison sociale, Adresse complète.
+Litige :
+- Objet (Impayé, Livraison non conforme, Prestation non faite, Remboursement, Autre)
+- Description des faits (texte long)
+- Date des faits
+- Montant dû en euros (nombre, optionnel)
+- Action demandée (Paiement, Exécution, Remboursement)
+- Délai accordé (8 jours, 15 jours, 30 jours)
+---
+
+
+═══════════════════════════════════════════════════════
+FORM 6 — Réclamation assurance (22 €)
+═══════════════════════════════════════════════════════
+Titre : ActaExpress — Réclamation assurance
+Bouton : Continuer vers le paiement — 22 €
+
+Prompt IA :
+---
+Adapte pour réclamation assurance France.
+- Nom assurance, N° contrat, N° sinistre (optionnel)
+- Type contrat (Auto, Habitation, Santé, Autre)
+- Objet (Refus indemnisation, Indemnisation insuffisante, Retard, Autre)
+- Date sinistre ou décision
+- Description faits (texte long)
+- Montant réclamé (optionnel)
+- Démarches déjà faites (Téléphone, Email, Courrier, Aucune)
+Garde identité + email.
+---
+
+
+═══════════════════════════════════════════════════════
+FORM 7 — Réclamation banque (22 €)
+═══════════════════════════════════════════════════════
+Titre : ActaExpress — Réclamation banque
+Bouton : Continuer vers le paiement — 22 €
+
+Prompt IA :
+---
+Adapte pour réclamation banque France.
+- Nom banque, N° compte ou client
+- Objet (Frais bancaires, Prélèvement non autorisé, Fermeture compte, Autre)
+- Date des faits, Montant contesté (euros)
+- Description détaillée (texte long)
+- Déjà réclamé en agence (Oui, Non)
+Garde identité + email.
+---
+
+
+═══════════════════════════════════════════════════════
+FORM 8 — Contestation amende (29 €)
+═══════════════════════════════════════════════════════
+Titre : ActaExpress — Contestation amende
+Bouton : Continuer vers le paiement — 29 €
+
+Prompt IA :
+---
+Adapte pour contestation amende France.
+- Type amende (Stationnement, Radar, Feu rouge, Autre)
+- N° avis contravention (optionnel)
+- Date infraction, Lieu, Montant (euros)
+- Motif contestation (texte long)
+- Preuves disponibles (Photos, Ticket parking, Témoignage, Aucune)
+- Amende majorée reçue (Oui, Non, Pas encore)
+Garde identité + email.
+---
+
+
+APRÈS LES 8 FORMS — ENVOIE-MOI :
+---------------------------------
+02 box         : https://tally.so/r/...
+03 energie     : ...
+04 assurance   : ...
+05 mise demeure : ...
+06 reclam ass  : ...
+07 reclam banq : ...
+08 amende      : ...
+
+Puis : redeploy Netlify + on fait Stripe ensemble.

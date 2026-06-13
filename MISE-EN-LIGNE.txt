@@ -1,0 +1,43 @@
+ACTAEXPRESS — METTRE LE SITE EN LIGNE (SANS CARRD, SANS LOCAL)
+================================================================
+
+OPTION A — LA PLUS SIMPLE (2 MINUTES, GRATUIT, TU FAIS GLISSER LE DOSSIER)
+---------------------------------------------------------------------------
+1. Ouvre dans Chrome : https://app.netlify.com/drop
+2. Glisse le dossier entier :
+   C:\Users\mouss\Projects\actaexpress
+3. Netlify te donne une URL live du type :
+   https://random-name-123.netlify.app
+4. C'est en ligne — plus de localhost.
+
+Plus tard : compte Netlify gratuit → connecter actaexpress.fr
+
+
+OPTION B — CARRD (JE NE PEUX PAS ME CONNECTER À TON COMPTE)
+-----------------------------------------------------------
+Carrd = ton compte perso. Je n'ai pas accès à tally.so / carrd.co / ton login.
+
+MAIS tu copies-colle section par section (15–20 min pour la 1ère page).
+Voir fichier : CARRD-COPIER-COLLER.txt
+
+
+OPTION C — NETLIFY AVEC COMPTE (PERMANENT)
+------------------------------------------
+1. Crée compte gratuit : https://app.netlify.com/signup
+2. Add new site → Deploy manually → glisse le dossier actaexpress
+3. Site Settings → Change site name → actaexpress (si dispo)
+   URL : https://actaexpress.netlify.app
+
+
+POURQUOI J'AVAIS FAIT "LOCAL" ?
+-------------------------------
+C'était une preview sur ton PC pour le design.
+Le VRAI site = le même dossier, hébergé en ligne (Netlify Drop).
+
+
+ORDRE RECOMMANDÉ MAINTENANT
+---------------------------
+1. Netlify Drop (site en ligne)     ← 2 min
+2. Tally (8 formulaires)            ← specs dans content/tally/
+3. Stripe (8 liens paiement)
+4. Domaine actaexpress.fr en dernier

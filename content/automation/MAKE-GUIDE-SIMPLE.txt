@@ -1,0 +1,144 @@
+ACTAEXPRESS — AUTOMATISATION SIMPLE (Make.com)
+================================================
+
+TU VEUX QUOI ?
+  Client remplit Tally → paie sur Stripe → reçoit le PDF par email
+  SANS que tu fasses quoi que ce soit à la main.
+
+POURQUOI 2 ÉTAPES (pas 1 seule) ?
+  1. Tally = le questionnaire (nom, adresse, opérateur...)
+  2. Stripe = le paiement (17 €, 22 €...)
+  Tally ne sait pas si le client a payé. Stripe ne connaît pas les réponses du questionnaire.
+  → On relie les deux avec un Google Sheet + Make.com.
+
+SCHÉMA
+  Client → Tally → Stripe (paie) → PDF par email automatique
+              ↓           ↓
+         Google Sheet  (Make détecte le paiement)
+
+COÛT
+  Make.com : gratuit jusqu'à ~1000 actions/mois (largement OK au début)
+  OpenAI : ~0,05 à 0,15 € par document
+  Google Sheet + Gmail : gratuit
+
+================================================================================
+ÉTAPE 0 — CRÉER LES COMPTES (si pas déjà fait)
+================================================================================
+  □ make.com (gratuit)
+  □ Google (Sheet + Gmail acta.express0@gmail.com)
+  □ platform.openai.com → API key (sk-...)
+  □ Stripe déjà OK en live
+
+================================================================================
+ÉTAPE 1 — GOOGLE SHEET (base de données)
+================================================================================
+Crée un fichier Google Sheet nommé : ActaExpress Commandes
+
+Onglet : Commandes
+
+Colonnes (ligne 1) :
+  A  date
+  B  email
+  C  type_doc          (ex: resiliation-mobile)
+  D  paye              (oui / non)
+  E  prenom
+  F  nom
+  G  adresse
+  H  code_postal
+  I  ville
+  J  telephone
+  K  operateur
+  L  numero_client
+  M  numero_ligne
+  N  date_effet
+  O  motif
+  P  reponses_json     (toutes les réponses en texte)
+  Q  pdf_envoye        (oui / non)
+
+→ Adapte les colonnes selon ton form Tally mobile (on commence par 1 seul doc).
+
+================================================================================
+ÉTAPE 2 — SCÉNARIO MAKE N°1 : Tally enregistre la commande
+================================================================================
+Make → Create scenario → nom : ActaExpress - Tally vers Sheet
+
+Module 1 : Webhooks → Custom webhook
+  → Make te donne une URL webhook (copie-la)
+
+Dans Tally (form Mobile KYR0yA) :
+  Settings → Integrations → Webhooks → Add webhook
+  → Colle l'URL Make
+  → Event : Form submission
+
+Module 2 : Google Sheets → Add a row
+  → Connecte ton compte Google
+  → Sheet : ActaExpress Commandes
+  → Remplis les colonnes avec les champs du webhook Tally
+  → type_doc = resiliation-mobile
+  → paye = non
+  → pdf_envoye = non
+
+Sauvegarde + ON (active le scénario).
+
+TEST : remplis le form Tally (sans payer) → une ligne doit apparaître dans le Sheet.
+
+================================================================================
+ÉTAPE 3 — SCÉNARIO MAKE N°2 : Stripe paie → PDF → email
+================================================================================
+Make → Create scenario → nom : ActaExpress - Stripe vers PDF
+
+Module 1 : Stripe → Watch Events
+  → Connecte Stripe (mode LIVE)
+  → Event : checkout.session.completed
+     (ou payment_intent.succeeded)
+
+Module 2 : Google Sheets → Search rows
+  → Sheet : ActaExpress Commandes
+  → Filter : email = {email du client Stripe}
+  → paye = non
+  → Trier par date décroissante → prendre la 1ère ligne
+
+Module 3 : OpenAI → Create a completion (GPT-4o-mini suffit)
+  → Prompt : copie content/prompts/openai-base.txt
+  → Remplace {{reponses_json}} par les données de la ligne Sheet
+  → type_document = Résiliation mobile
+
+Module 4 : Créer le PDF
+  Option simple : module "Google Docs → Create a document from template"
+  Option alternative : PDF.co / Convert API (gratuit limité)
+
+Module 5 : Gmail → Send an email
+  → De : acta.express0@gmail.com
+  → À : email client
+  → Objet : ActaExpress — Votre lettre de résiliation mobile
+  → Pièce jointe : le PDF
+  → Corps : message de confirmation + checklist envoi AR
+
+Module 6 : Google Sheets → Update a row
+  → paye = oui
+  → pdf_envoye = oui
+
+Sauvegarde + ON.
+
+TEST : form Tally + paiement 17 € → PDF reçu par email sous 2-5 min.
+
+================================================================================
+ÉTAPE 4 — QUAND ÇA MARCHE SUR MOBILE
+================================================================================
+  □ Dupliquer le scénario Tally pour les 7 autres forms
+  □ Ou 1 seul webhook avec type_doc selon le form ID Tally
+  □ Mettre à jour les 7 redirects Stripe dans Tally (si pas fait)
+
+================================================================================
+SI TU BLOQUES
+================================================================================
+  Dis dans le chat :
+    « go make étape 1 » → on fait le Google Sheet ensemble
+    « go make étape 2 » → on branche Tally
+    « go make étape 3 » → on branche Stripe + OpenAI + email
+
+  Envoie une capture d'écran Make si erreur.
+
+SÉCURITÉ
+  Ne mets jamais sk_live ou clé OpenAI dans le site GitHub.
+  Uniquement dans Make.com (connexions sécurisées).

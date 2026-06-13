@@ -1,0 +1,36 @@
+ACTAEXPRESS — PROCHAINES ÉTAPES
+===============================
+
+FAIT (dans ce dossier)
+- Site vitrine : index.html + 8 pages documents
+- Design pro (css/style.css)
+- Pages légales (mentions, CGV, confidentialité)
+- Modèle lettre + prompt OpenAI (content/)
+
+TOI — MAINTENANT (ordre)
+1. Acheter actaexpress.fr sur Infomaniak ou OVH (~10 €/an)
+2. Créer micro-entreprise URSSAF → récupérer SIRET
+3. Compléter legal/mentions-legales.html (SIRET, adresse)
+
+TOI — SEMAINE 1
+4. Créer 8 formulaires Tally.so (1 par document, questions déjà définies)
+5. Créer compte Stripe → 8 Payment Links (17€, 22€, 24€, 29€)
+6. Coller les liens Stripe dans js/doc-data.js (stripePlaceholder)
+
+TOI — SEMAINE 2
+7. Make.com : Tally submit → OpenAI → PDF → email SendGrid
+8. Tester 1 doc de bout en bout (résiliation mobile)
+9. Mettre en ligne : Netlify (gratuit) ou Infomaniak hébergement
+
+TOI — SEMAINE 3
+10. Google Search Console + Analytics
+11. Google Ads 20 €/jour (résiliation mobile, box, énergie)
+12. LIVE
+
+PREVIEW LOCAL
+Ouvrir index.html dans le navigateur (double-clic) ou :
+  cd C:\Users\mouss\Projects\actaexpress
+  npx --yes serve .
+
+DOSSIER PROJET
+C:\Users\mouss\Projects\actaexpress

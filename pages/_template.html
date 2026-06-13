@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document — ActaExpress</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="../index.html" class="logo">Acta<span>Express</span></a>
+      <nav class="nav-desktop">
+        <a href="../index.html#documents">Documents</a>
+        <a href="../tarifs.html">Tarifs</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
+      <button class="menu-toggle" aria-label="Menu">☰</button>
+    </div>
+    <nav class="nav-mobile container">
+      <a href="../index.html#documents">Documents</a>
+      <a href="../tarifs.html">Tarifs</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <div class="page-hero">
+    <div class="container">
+      <h1 id="page-title">Document</h1>
+      <div class="meta">
+        <span class="price-tag" id="page-price">17 €</span>
+        <span id="page-delivery">PDF instantané par email</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-content">
+    <div class="container two-col">
+      <div class="content-block">
+        <h2 id="page-intro-title">Pour qui ?</h2>
+        <p id="page-intro">Description du document.</p>
+        <h2>Ce que contient votre document</h2>
+        <ul id="page-includes"></ul>
+        <h2>Comment envoyer votre lettre</h2>
+        <ul id="page-checklist">
+          <li>Imprimez le PDF ou envoyez-le en recommandé avec AR</li>
+          <li>Joignez une copie de votre pièce d'identité si nécessaire</li>
+          <li>Conservez une copie et l'accusé de réception</li>
+        </ul>
+      </div>
+      <aside class="sidebar-card">
+        <h3>Votre document en 5 minutes</h3>
+        <ul>
+          <li>Questionnaire guidé (2–4 min)</li>
+          <li>Document personnalisé</li>
+          <li>PDF professionnel</li>
+          <li>Envoi par email immédiat</li>
+          <li>Checklist d'envoi incluse</li>
+        </ul>
+        <a href="#" id="cta-generate" class="btn btn-primary btn-lg" style="width:100%;">Générer — <span id="cta-price">17 €</span></a>
+        <div class="guarantee">Satisfait ou remboursé sous 7 jours. Paiement sécurisé Stripe.</div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>© 2026 ActaExpress</p>
+        <p class="disclaimer">Service de rédaction administrative — ne remplace pas un avocat.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="../js/doc-page.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

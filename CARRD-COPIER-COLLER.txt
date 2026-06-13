@@ -1,0 +1,120 @@
+﻿CARRD — COPIER-COLLER PAGE PAR PAGE
+===================================
+Compte : carrd.co → Sign up → New Site → Blank or "Profile" template (sober)
+
+COULEURS Carrd :
+  Background : #f8fafc
+  Text : #1e293b
+  Accent / buttons : #2563eb
+  Headings : #1e3a5f
+
+═══════════════════════════════════════════════════════════
+PAGE 1 — ACCUEIL (actaexpress.carrd.co ou page principale)
+═══════════════════════════════════════════════════════════
+
+[LOGO texte]
+ActaExpress
+
+[Badge]
+Service documentaire en ligne
+
+[Titre H1]
+Vos lettres admin et réclamations, prêtes à envoyer en 5 minutes
+
+[Paragraphe]
+Résiliations, mises en demeure, réclamations — répondez au questionnaire, payez en ligne, recevez votre PDF personnalisé par email.
+
+[3 colonnes ou liste]
+✓ PDF instantané par email
+✓ Satisfait ou remboursé 7 jours
+✓ Paiement sécurisé Stripe
+
+[Bouton principal]
+Choisir mon document
+→ Lien : #documents (ancre) ou scroll vers liste
+
+--- SECTION DOCUMENTS ---
+
+[Titre H2]
+Nos documents
+
+[Sous-titre]
+8 générateurs — France — conformes aux usages administratifs
+
+--- RÉSILIATIONS 17 € ---
+
+[Carte 1]
+Résiliation mobile
+Free, Orange, SFR, Bouygues
+17 € — Bouton : Générer → LIEN TALLY #1
+
+[Carte 2]
+Résiliation box / internet
+17 € — Bouton → LIEN TALLY #2
+
+[Carte 3]
+Résiliation énergie
+EDF, Engie, TotalEnergies
+17 € — Bouton → LIEN TALLY #3
+
+[Carte 4]
+Résiliation assurance / mutuelle
+17 € — Bouton → LIEN TALLY #4
+
+--- RÉCLAMATIONS ---
+
+[Carte 5]
+Mise en demeure — 24 € → TALLY #5
+[Carte 6]
+Réclamation assurance — 22 € → TALLY #6
+[Carte 7]
+Réclamation banque — 22 € → TALLY #7
+[Carte 8]
+Contestation amende — 29 € → TALLY #8
+
+[Footer]
+acta.express0@gmail.com
+ActaExpress — Service de rédaction de documents administratifs. Ne remplace pas un avocat.
+
+═══════════════════════════════════════════════════════════
+PAGE 2 — RÉSILIATION MOBILE (nouvelle page Carrd)
+═══════════════════════════════════════════════════════════
+
+[Titre H1]
+Lettre de résiliation mobile
+
+[Prix visible]
+17 € TTC
+
+[Intro]
+Résiliez votre forfait Free, Orange, SFR ou Bouygues. Document personnalisé, PDF prêt à envoyer en recommandé.
+
+[Liste]
+• Numéro de ligne et référence client
+• Date de résiliation
+• Demande d'arrêt des prélèvements
+• Checklist d'envoi incluse
+
+[Bouton large]
+Générer mon document — 17 €
+→ URL Tally formulaire #1
+
+[Petit texte]
+Satisfait ou remboursé 7 jours
+
+[Lien retour]
+← Tous les documents
+
+(Répéter même structure pour pages 3 à 9 avec textes des fichiers content/tally/)
+
+═══════════════════════════════════════════════════════════
+CARRD PRO PLUS (~19€/an) — utile pour :
+  • Plus de 3 sites / pages
+  • Domaine actaexpress.fr custom
+  • Formulaires embed (optionnel — Tally en lien externe suffit)
+
+═══════════════════════════════════════════════════════════
+ASTUCE : 1 seule page Carrd longue (scroll) = GRATUIT
+  Toutes les sections accueil + 8 services sur UNE page
+  Chaque "Générer" → lien Tally différent
+  = 0€, en ligne en 30 minutes

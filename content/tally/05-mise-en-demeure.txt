@@ -1,0 +1,38 @@
+FORMULAIRE TALLY #5 — MISE EN DEMEURE (24 €)
+============================================
+Titre : ActaExpress — Mise en demeure
+
+[M] Civilité * → Monsieur | Madame
+[T] Nom *
+[T] Prénom *
+[T] Adresse (votre adresse — créancier) *
+[T] Code postal *
+[T] Ville *
+[E] Email *
+[P] Téléphone (optionnel)
+
+[T] Nom ou raison sociale du débiteur *
+[T] Adresse complète du débiteur *
+
+[M] Objet du litige *
+    Impayé / facture non réglée | Livraison non conforme | Prestation non effectuée | Remboursement dû | Autre
+
+[L] Description des faits *
+    Placeholder : Dates, montants, échanges déjà effectués…
+
+[D] Date du fait générateur (facture, commande…) *
+
+[N] Montant dû (€) — laisser 0 si non applicable
+
+[M] Action demandée *
+    Paiement | Exécution de la prestation | Remboursement | Autre
+
+[M] Délai accordé au débiteur *
+    8 jours | 15 jours | 30 jours
+
+[M] Pièces jointes que vous enverrez avec la lettre
+    Facture | Contrat | Bon de commande | Emails / courriers | Aucune pour l'instant
+
+[L] Autres précisions (optionnel)
+
+Bouton : Continuer vers le paiement — 24 €

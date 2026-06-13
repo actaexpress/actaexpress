@@ -1,0 +1,6 @@
+# Dossier de deploiement Netlify (sans geo/ — 280k fichiers)
+# Genere par: python scripts/prepare-netlify-deploy.py
+
+geo/
+sitemap-*.xml
+netlify-deploy/

@@ -1,0 +1,36 @@
+{{prenom}} {{nom}}
+{{adresse_ligne1}}
+{{code_postal}} {{ville}}
+{{email}} — {{telephone}}
+
+{{ville}}, le {{date_aujourdhui}}
+
+{{nom_operateur}}
+Service Résiliation
+[Adresse service client — voir facture ou site opérateur]
+
+Lettre recommandée avec accusé de réception
+
+Objet : Résiliation de mon contrat {{type_contrat}} — Client n° {{numero_client}}
+
+Madame, Monsieur,
+
+Je vous informe par la présente de ma décision de résilier mon contrat {{type_contrat}} souscrit auprès de votre société, référence client {{numero_client}}{{#numero_ligne}}, ligne n° {{numero_ligne}}{{/numero_ligne}}.
+
+Motif de résiliation : {{motif}}.
+
+Conformément aux dispositions légales et contractuelles en vigueur, je souhaite que cette résiliation prenne effet le {{date_effet_resiliation}}.
+
+Je vous prie de :
+- confirmer par écrit la prise en compte de cette résiliation ;
+- m'indiquer le montant éventuel des sommes restant dues ;
+- cesser tout prélèvement après la date d'effet ;
+- me restituer, le cas échéant, les sommes indûment perçues.
+
+Je joins à cette lettre une copie de ma pièce d'identité.
+
+Veuillez agréer, Madame, Monsieur, l'expression de mes salutations distinguées.
+
+{{prenom}} {{nom}}
+
+Pièces jointes : copie pièce d'identité

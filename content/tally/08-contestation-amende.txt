@@ -1,0 +1,36 @@
+FORMULAIRE TALLY #8 — CONTESTATION AMENDE (29 €)
+=================================================
+Titre : ActaExpress — Contestation amende
+
+[M] Civilité * → Monsieur | Madame
+[T] Nom *
+[T] Prénom *
+[T] Adresse *
+[T] Code postal *
+[T] Ville *
+[E] Email *
+[P] Téléphone (optionnel)
+
+[M] Type d'amende *
+    Stationnement | Excès de vitesse (radar) | Feu rouge | Autre infraction
+
+[T] Numéro de l'avis de contravention (si connu)
+
+[D] Date de l'infraction *
+[T] Lieu de l'infraction *
+[N] Montant de l'amende (€) *
+
+[M] Motif principal de contestation *
+    Panneau absent ou illisible | Stationnement payant (justificatif) | Erreur d'identification | Circonstances particulières | Autre
+
+[L] Expliquez les faits et votre contestation *
+
+[M] Preuves disponibles
+    Photos | Ticket de parking | Témoignage | Aucune
+
+[M] Amende majorée reçue ?
+    Oui | Non | Pas encore
+
+[L] Informations complémentaires (optionnel)
+
+Bouton : Continuer vers le paiement — 29 €

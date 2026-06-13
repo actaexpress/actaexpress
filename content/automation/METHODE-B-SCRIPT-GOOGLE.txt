@@ -1,0 +1,93 @@
+ACTAEXPRESS — MÉTHODE B (si Extensions → Apps Script ne marche pas)
+=====================================================================
+
+Erreur « Impossible d'ouvrir le fichier » → on passe par script.google.com DIRECT.
+
+================================================================================
+ÉTAPE A — Bon compte Google
+================================================================================
+
+1. Chrome → icône profil en haut à droite
+2. Connecte-toi UNIQUEMENT avec : acta.express0@gmail.com
+   (ou déconnecte les autres comptes temporairement)
+3. Ouvre une fenêtre privée si besoin (Ctrl+Shift+N)
+
+================================================================================
+ÉTAPE B — ID de ton Google Sheet
+================================================================================
+
+1. Ouvre ActaExpress Commandes dans Sheets
+2. Regarde l'URL :
+
+   https://docs.google.com/spreadsheets/d/  ICI_CEST_L_ID  /edit
+
+3. Copie la longue chaîne entre /d/ et /edit
+   Exemple : 1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms
+
+   → Garde cet ID, tu en auras besoin.
+
+================================================================================
+ÉTAPE C — Créer le script (sans Extensions)
+================================================================================
+
+1. Va sur : https://script.google.com/home
+
+2. Clique **Nouveau projet** (ou New project)
+
+3. Si erreur encore :
+   - Essaie Firefox ou Edge
+   - Ou attends 10 min et réessaie (bug Google temporaire)
+
+4. Renomme le projet : ActaExpress Auto
+
+5. Supprime le code par défaut
+
+6. Colle TOUT le fichier :
+   C:\Users\mouss\Projects\actaexpress\content\automation\actaexpress-auto.gs
+
+7. Enregistrer (Ctrl+S)
+
+================================================================================
+ÉTAPE D — Propriétés du script (3 valeurs)
+================================================================================
+
+⚙ Paramètres du projet → Propriétés du script → Ajouter :
+
+| Propriété        | Valeur                          |
+|------------------|---------------------------------|
+| OPENAI_API_KEY   | sk-proj-... (ta clé OpenAI)     |
+| ADMIN_EMAIL      | acta.express0@gmail.com         |
+| SPREADSHEET_ID   | l'ID copié à l'étape B          |
+
+Enregistrer.
+
+================================================================================
+ÉTAPE E — Déployer
+================================================================================
+
+1. Déployer → Nouveau déploiement → Application Web
+2. Exécuter en tant que : Moi
+3. Accès : Tout le monde
+4. Déployer → Autoriser (Avancé → Accéder si demandé)
+5. Copie l'URL : https://script.google.com/macros/s/XXXX/exec
+
+6. Test : colle l'URL dans Chrome → tu dois voir :
+   {"ok":true,"service":"ActaExpress auto PDF"}
+
+================================================================================
+ÉTAPE F — Autoriser Gmail (important pour envoyer le PDF)
+================================================================================
+
+La première fois qu'un client paie, Google peut demander d'autoriser Gmail.
+Si le PDF ne part pas :
+  - Apps Script → Exécutions → voir l'erreur
+  - Relance manuellement une fonction ou refais un test paiement
+
+================================================================================
+ENSUITE
+================================================================================
+
+  Tally webhook  → URL /exec
+  Stripe webhook → même URL /exec
+
+Dis « déployé » quand l'URL affiche ok:true.

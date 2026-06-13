@@ -1,0 +1,35 @@
+FORMULAIRE TALLY #3 — RÉSILIATION ÉNERGIE (17 €)
+=================================================
+Titre : ActaExpress — Résiliation électricité / gaz
+
+[M] Civilité * → Monsieur | Madame
+[T] Nom *
+[T] Prénom *
+[T] Adresse (expéditeur) *
+[T] Code postal *
+[T] Ville *
+[E] Email *
+[P] Téléphone (optionnel)
+
+[M] Fournisseur *
+    EDF | Engie | TotalEnergies | Mint Énergie | Autre
+
+[M] Type d'énergie *
+    Électricité seule | Gaz seul | Électricité et gaz
+
+[T] Numéro PDL (électricité) ou PCE (gaz) *
+    Help text : Sur votre facture ou compteur
+
+[T] Adresse du compteur / point de livraison *
+
+[D] Date souhaitée de résiliation *
+
+[M] Motif *
+    Déménagement | Changement de fournisseur | Fin de bail | Fermeture du logement | Autre
+
+[M] Relève de compteur effectuée ?
+    Oui | Non | À faire par le nouveau occupant
+
+[L] Informations complémentaires (optionnel)
+
+Bouton : Continuer vers le paiement — 17 €

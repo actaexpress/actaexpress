@@ -1,0 +1,31 @@
+FORMULAIRE TALLY #7 — RÉCLAMATION BANQUE (22 €)
+================================================
+Titre : ActaExpress — Réclamation banque
+
+[M] Civilité * → Monsieur | Madame
+[T] Nom *
+[T] Prénom *
+[T] Adresse *
+[T] Code postal *
+[T] Ville *
+[E] Email *
+[P] Téléphone (optionnel)
+
+[T] Nom de la banque *
+[T] Numéro de compte ou identifiant client (4 derniers chiffres minimum)
+
+[M] Objet de la réclamation *
+    Frais bancaires contestés | Prélèvement non autorisé | Fermeture de compte | Incident de service | Autre
+
+[D] Date des faits *
+
+[N] Montant contesté (€) *
+
+[L] Description détaillée *
+
+[M] Réclamation déjà faite en agence ou par téléphone ?
+    Oui | Non
+
+[L] Si oui, quelle réponse avez-vous reçue ? (optionnel)
+
+Bouton : Continuer vers le paiement — 22 €

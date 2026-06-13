@@ -1,0 +1,42 @@
+FORMULAIRE TALLY #1 — RÉSILIATION MOBILE (17 €)
+================================================
+Titre du form : ActaExpress — Résiliation mobile
+Description : Répondez en 2–4 minutes. Votre lettre personnalisée sera générée après paiement.
+
+--- CHAMPS (dans l'ordre) ---
+
+[M] Civilité *
+    Options : Monsieur | Madame
+
+[T] Nom *
+[T] Prénom *
+
+[T] Adresse (numéro et rue) *
+[T] Code postal *
+[T] Ville *
+
+[E] Email * (pour recevoir le PDF)
+[P] Téléphone (optionnel)
+
+[M] Opérateur *
+    Options : Free | Orange | SFR | Bouygues | Autre
+    Si Autre → afficher champ [T] Précisez l'opérateur
+
+[T] Numéro de ligne mobile * (10 chiffres)
+[T] Numéro client / référence contrat * (sur votre facture)
+
+[D] Date souhaitée de résiliation *
+
+[M] Motif de résiliation *
+    Options : Fin de période d'engagement | Déménagement | Insatisfaction | Changement d'opérateur | Autre
+    Si Autre → [T] Précisez le motif
+
+[M] Souhaitez-vous l'arrêt des prélèvements automatiques ? *
+    Options : Oui | Non
+
+[L] Informations complémentaires (optionnel)
+
+--- FIN ---
+Bouton : Continuer vers le paiement — 17 €
+
+Hidden field (optionnel Tally Pro) : document_type = resiliation-mobile

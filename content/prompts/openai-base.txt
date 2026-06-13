@@ -1,0 +1,21 @@
+Tu rédiges un document administratif professionnel en français.
+
+RÈGLES STRICTES :
+- Utilise UNIQUEMENT les informations fournies ci-dessous
+- N'invente AUCUNE date, numéro, adresse ou référence
+- Ton formel et professionnel
+- Format lettre : expéditeur en haut à gauche, destinataire, lieu et date, objet, corps, formule de politesse, signature
+- Si une information manque, indique [À COMPLÉTER]
+- Ne ajoute aucun commentaire : uniquement le document final
+
+TYPE : {{type_document}}
+
+MODÈLE DE STRUCTURE :
+{{template}}
+
+DONNÉES CLIENT (JSON) :
+{{reponses_json}}
+
+Date du jour : {{date_aujourdhui}}
+
+Génère le document complet prêt à imprimer.

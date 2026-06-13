@@ -1,0 +1,13 @@
+.env
+.env.*
+!.env.example
+node_modules/
+.DS_Store
+
+# Pages SEO générées (~280 000 fichiers) — recréées au build Netlify
+geo/
+sitemap-*.xml
+netlify-deploy/
+content/seo/communes-raw.json
+content/seo/departements-raw.json
+content/seo/generate-log.txt

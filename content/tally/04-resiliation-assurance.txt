@@ -1,0 +1,31 @@
+FORMULAIRE TALLY #4 — RÉSILIATION ASSURANCE / MUTUELLE (17 €)
+===============================================================
+Titre : ActaExpress — Résiliation assurance ou mutuelle
+
+[M] Civilité * → Monsieur | Madame
+[T] Nom *
+[T] Prénom *
+[T] Adresse *
+[T] Code postal *
+[T] Ville *
+[E] Email *
+[P] Téléphone (optionnel)
+
+[T] Nom de l'assurance ou mutuelle *
+[T] Numéro de contrat *
+
+[M] Type de contrat *
+    Assurance auto | Assurance habitation | Mutuelle santé | Prévoyance | Autre
+
+[D] Date souhaitée de résiliation *
+
+[M] Motif *
+    Échéance annuelle | Loi Hamon (changement assureur) | Vente du véhicule | Déménagement | Autre
+
+[M] Contrat de plus d'un an ?
+    Oui | Non | Je ne sais pas
+    Help : Important pour la loi Hamon (assurance habitation/auto)
+
+[L] Informations complémentaires (optionnel)
+
+Bouton : Continuer vers le paiement — 17 €
