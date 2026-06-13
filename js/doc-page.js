@@ -33,5 +33,10 @@ document.addEventListener("DOMContentLoaded", () => {
     cta.href = tallyUrl || doc.stripePlaceholder || "#";
     cta.textContent = `Générer mon document — ${doc.price}`;
     if (!tallyUrl) cta.title = "Configurer l'URL Tally dans js/tally-urls.js";
+    const ctaMobile = document.getElementById("cta-generate-mobile");
+    if (ctaMobile) {
+      ctaMobile.href = cta.href;
+      ctaMobile.textContent = `Générer — ${doc.price}`;
+    }
   }
 });

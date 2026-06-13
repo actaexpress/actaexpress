@@ -154,6 +154,7 @@ def header(depth: int) -> str:
       <a href="{p}geo/index.html">France entière</a>
       <a href="{p}tarifs.html">Tarifs</a>
       <a href="{p}contact.html">Contact</a>
+      <a href="{p}index.html#documents" class="btn btn-primary">Choisir un document</a>
     </nav>
   </header>"""
 

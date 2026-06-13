@@ -101,6 +101,7 @@ TEMPLATE = """<!DOCTYPE html>
       <a href="../index.html#documents">Documents</a>
       <a href="../tarifs.html">Tarifs</a>
       <a href="../contact.html">Contact</a>
+      <a href="#" id="cta-generate-mobile" class="btn btn-primary">Générer mon document</a>
     </nav>
   </header>
 

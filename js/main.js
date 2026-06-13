@@ -14,7 +14,7 @@ function showCookieBanner() {
         <a href="/legal/cookies.html">En savoir plus</a>
       </p>
       <div class="cookie-banner-actions">
-        <button type="button" class="btn btn-sm" data-cookie="reject">Refuser</button>
+        <button type="button" class="btn btn-secondary btn-sm" data-cookie="reject">Refuser</button>
         <button type="button" class="btn btn-primary btn-sm" data-cookie="accept">Accepter</button>
       </div>
     </div>
