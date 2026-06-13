@@ -1,0 +1,51 @@
+GOOGLE SEARCH CONSOLE — ACTAEXPRESS (5 minutes)
+================================================
+
+Le SEO est DEJA en ligne sur le site :
+- https://actaexpress.fr/geo/          (34 969 communes)
+- https://actaexpress.fr/sitemap.xml   (280 792 URLs, 7 fichiers)
+- https://actaexpress.fr/robots.txt
+
+ETAPE 1 — Ouvrir Search Console
+---------------------------------
+1. Chrome profil actaexpress
+2. https://search.google.com/search-console
+3. Connectez-vous avec acta.express0@gmail.com (ou compte Google du site)
+
+ETAPE 2 — Ajouter la propriété
+------------------------------
+1. Cliquez "Ajouter une propriété"
+2. Choisissez "Préfixe d'URL"
+3. Entrez : https://actaexpress.fr
+4. Cliquez Continuer
+
+ETAPE 3 — Vérifier le site
+--------------------------
+Méthode la plus simple : balise HTML
+1. Google donne une balise meta du type :
+   <meta name="google-site-verification" content="XXXXX" />
+2. Copiez-la et envoyez-la moi dans le chat
+   → je l'ajoute dans index.html et je redéploie
+3. Cliquez "Vérifier" dans Search Console
+
+ETAPE 4 — Soumettre le sitemap
+------------------------------
+1. Menu gauche → "Sitemaps"
+2. Dans "Ajouter un sitemap", tapez :
+   sitemap.xml
+3. Cliquez "Envoyer"
+
+Google va indexer progressivement les 280 000 pages (plusieurs semaines).
+
+ETAPE 5 — Suivi (1× par semaine)
+--------------------------------
+Menu "Performances" :
+- Impressions
+- Clics
+- Requêtes avec noms de villes (ex. "résiliation mobile Lyon")
+
+PAGES EXEMPLES DEJA INDEXABLES
+------------------------------
+https://actaexpress.fr/geo/resiliation-mobile/ville-paris-75056.html
+https://actaexpress.fr/geo/resiliation-mobile/dep-15-cantal.html
+https://actaexpress.fr/geo/resiliation-energie/ville-marseille-13055.html
